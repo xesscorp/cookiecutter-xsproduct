@@ -1,0 +1,16 @@
+{
+    "product_name": "my_product",
+    "repo_name": "{{cookiecutter.product_name}}",
+    "product_short_description": "The {{cookiecutter.product_name}} is truly awesome!",
+    "release_date": "yyyy-mm-dd",
+    "year": "yyyy",
+    "version": "0.1",
+    "product_type": "OSHW",
+    "license": "CC BY 4.0",
+    "license_link": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "license_icon": "https://i.creativecommons.org/l/by/4.0/88x31.png",
+    "_copy_without_render": [
+        "*.sty",
+        "docs/site/*"
+    ]
+}

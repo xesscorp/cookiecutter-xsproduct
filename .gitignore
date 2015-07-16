@@ -1,0 +1,17 @@
+*.py[cod]
+*.bak
+
+# mkdocs build directory
+docs/site/*
+
+# LaTeX stuff
+*.aux
+*.log
+*.toc
+
+# KiCad stuff
+pcb/_autosave*
+
+# Cookiecutter
+output/
+boilerplate/
