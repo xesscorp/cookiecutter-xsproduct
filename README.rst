@@ -1,6 +1,6 @@
-#cookiecutter-kicad
+#cookiecutter-xsproduct
 
-[Cookiecutter](https://github.com/audreyr/cookiecutter) template for a KiCad project.
+[Cookiecutter](https://github.com/audreyr/cookiecutter) template for an XESS product.
 
 ## Features
 
@@ -10,9 +10,9 @@
 
 ## Usage
 
-Generate a KiCad project:
+Generate an XESS product directory:
 
-    cookiecutter https://github.com/xesscorp/cookiecutter-kicad.git
+    cookiecutter https://github.com/xesscorp/cookiecutter-xsproduct.git
 
 Then:
 
