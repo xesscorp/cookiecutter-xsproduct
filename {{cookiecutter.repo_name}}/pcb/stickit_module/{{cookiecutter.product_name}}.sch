@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -2931,7 +2930,7 @@ AC 0E CC 20 6B 08 39 6D D4 3F A7 E6 5F 53 46 7D 19 56 BC A1 8C F9 D7 48 FE CF A5
 48 70 07 70 0B D9 93 E1 6B C8 B6 27 CC 53 B1 A0 3D 8C F5 6B 93 BD 87 9E 0C 3C 89 E5 EF A1 F5 81 
 35 C9 DE 37 33 58 FE 1E 9A CA D8 EF A3 F1 DE 43 CB DE 47 23 AC F8 1E 5A 56 24 B8 8B EC 3D 74 03 
 F0 6F B2 D3 0A 2F 53 9F A2 E2 FE 3F 79 73 7C 38 8D AC 56 91 00 00 00 00 49 45 4E 44 AE 42 60 82 
-3A 
+30 
 EndData
 $EndBitmap
 Text GLabel 5350 2900 2    60   Input ~ 0
@@ -2997,4 +2996,21 @@ Text GLabel 5350 4250 2    60   Input ~ 0
 GND
 Text Notes 4700 4550 0    60   Italic 0
 Ground-lead\nattachment point
+$Comp
+L JUMPER JP2
+U 1 1 57179D3C
+P 5050 4950
+F 0 "JP2" H 5050 5100 50  0000 C CNN
+F 1 "JUMPER" H 5050 4870 50  0001 C CNN
+F 2 "XESS:HDR_1x2" H 5050 4950 60  0001 C CNN
+F 3 "" H 5050 4950 60  0000 C CNN
+	1    5050 4950
+	1    0    0    -1  
+$EndComp
+Text GLabel 4750 4950 0    60   Input ~ 0
+VCC
+Text GLabel 5350 4950 2    60   Input ~ 0
+VCC
+Text Notes 4700 5250 0    60   Italic 0
+Power-lead\nattachment point
 $EndSCHEMATC

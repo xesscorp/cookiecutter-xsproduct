@@ -1,4 +1,4 @@
-update=04/09/2015 10:46:32 AM
+update=04/20/2016 11:42:01 AM
 version=1
 last_client=kicad
 [cvpcb]
@@ -39,8 +39,6 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=xess
-[general]
-version=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=C:/xesscorp/KiCad/page_layouts/title_block_only.kicad_wks
@@ -61,3 +59,5 @@ SolderMaskMinWidth=0
 DrawSegmentWidth=0.2
 BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
+[general]
+version=1
