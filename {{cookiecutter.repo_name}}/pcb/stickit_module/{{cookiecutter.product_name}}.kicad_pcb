@@ -14,13 +14,13 @@
 
   (page A4)
   (title_block
-    (title {{cookiecutter.product_name}})
-    (date {{cookiecutter.release_date}})
-    (rev {{cookiecutter.version}})
-    (company {{cookiecutter.full_name}})
+    (title "{{cookiecutter.product_name}}")
+    (date "{{cookiecutter.release_date}}")
+    (rev "{{cookiecutter.version}}")
+    (company "{{cookiecutter.full_name}}")
     (comment 1 "(c) {{cookiecutter.year}}")
-    (comment 2 {{cookiecutter.product_type}})
-    (comment 3 {{cookiecutter.license}})
+    (comment 2 "{{cookiecutter.product_type}}")
+    (comment 3 "{{cookiecutter.license}}")
   )
 
   (layers
