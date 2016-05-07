@@ -1,4 +1,13 @@
 {
+    "full_name": "",
+    "email": "",
+    "github_username": "",
+    "website": "",
+    "twitter": "",
+    "lead_dev": "",
+    "lead_dev_email": "",
+    "lead_dev_twitter": "",
+
     "product_name": "my_product",
     "repo_name": "{{cookiecutter.product_name}}",
     "product_short_description": "The {{cookiecutter.product_name}} is truly awesome!",
