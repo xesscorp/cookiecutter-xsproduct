@@ -29,6 +29,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:xess
+LIBS:{{cookiecutter.product_name}}-cache
 EELAYER 25 0
 EELAYER END
 $Descr USLetter 11000 8500
@@ -2422,7 +2423,7 @@ A3 D2 2B 1A 15 5F 31 0D 5D 7E F7 E1 E3 73 69 69 D8 54 CE 58 22 92 60 CB 56 9F 48
 CB 47 A8 F4 8A 4C CB 19 8A 29 3B BB 1D 7C 0B 7F BB D4 A1 0F C7 E7 99 94 3F 43 A5 27 22 7F A5 A9 
 E1 21 B6 4C 78 E3 AE 0D AF F3 7B FC AD 4A AF 04 34 E2 2B 85 FE A9 CB AD C0 51 C0 9D 78 77 29 2D 
 75 77 1B A7 12 91 A4 6B 5F 73 06 71 E1 73 38 F7 7A E0 11 70 57 90 AD BB D9 3A 56 DA FC 7F 93 50 
-01 E2 3B 8D 16 13 00 00 00 00 49 45 4E 44 AE 42 60 82 00 
+01 E2 3B 8D 16 13 00 00 00 00 49 45 4E 44 AE 42 60 82 FD 
 EndData
 $EndBitmap
 $Bitmap
@@ -2930,28 +2931,28 @@ AC 0E CC 20 6B 08 39 6D D4 3F A7 E6 5F 53 46 7D 19 56 BC A1 8C F9 D7 48 FE CF A5
 48 70 07 70 0B D9 93 E1 6B C8 B6 27 CC 53 B1 A0 3D 8C F5 6B 93 BD 87 9E 0C 3C 89 E5 EF A1 F5 81 
 35 C9 DE 37 33 58 FE 1E 9A CA D8 EF A3 F1 DE 43 CB DE 47 23 AC F8 1E 5A 56 24 B8 8B EC 3D 74 03 
 F0 6F B2 D3 0A 2F 53 9F A2 E2 FE 3F 79 73 7C 38 8D AC 56 91 00 00 00 00 49 45 4E 44 AE 42 60 82 
-30 
+D0 
 EndData
 $EndBitmap
-Text GLabel 5350 2900 2    60   Input ~ 0
+Text GLabel 5350 2900 2    50   Input ~ 0
 GND
-Text GLabel 5350 3000 2    60   Input ~ 0
+Text GLabel 5350 3000 2    50   Input ~ 0
 VCC
-Text GLabel 5350 2500 2    60   Input ~ 0
+Text GLabel 5350 2500 2    50   Input ~ 0
 D0
-Text GLabel 5350 2600 2    60   Input ~ 0
+Text GLabel 5350 2600 2    50   Input ~ 0
 D2
-Text GLabel 5350 2700 2    60   Input ~ 0
+Text GLabel 5350 2700 2    50   Input ~ 0
 D4
-Text GLabel 5350 2800 2    60   Input ~ 0
+Text GLabel 5350 2800 2    50   Input ~ 0
 D6
-Text GLabel 4750 2500 0    60   Input ~ 0
+Text GLabel 4750 2500 0    50   Input ~ 0
 D1
-Text GLabel 4750 2600 0    60   Input ~ 0
+Text GLabel 4750 2600 0    50   Input ~ 0
 D3
-Text GLabel 4750 2700 0    60   Input ~ 0
+Text GLabel 4750 2700 0    50   Input ~ 0
 D5
-Text GLabel 4750 2800 0    60   Input ~ 0
+Text GLabel 4750 2800 0    50   Input ~ 0
 D7
 $Comp
 L PWR_FLAG #FLG01
@@ -2975,9 +2976,9 @@ F 3 "" H 5250 3550 60  0000 C CNN
 	1    5250 3550
 	1    0    0    -1  
 $EndComp
-Text GLabel 4850 3550 3    60   Input ~ 0
+Text GLabel 4850 3550 3    50   Input ~ 0
 GND
-Text GLabel 5250 3550 3    60   Input ~ 0
+Text GLabel 5250 3550 3    50   Input ~ 0
 VCC
 $Comp
 L JUMPER JP1
@@ -2990,9 +2991,9 @@ F 3 "" H 5050 4250 60  0000 C CNN
 	1    5050 4250
 	1    0    0    -1  
 $EndComp
-Text GLabel 4750 4250 0    60   Input ~ 0
+Text GLabel 4750 4250 0    50   Input ~ 0
 GND
-Text GLabel 5350 4250 2    60   Input ~ 0
+Text GLabel 5350 4250 2    50   Input ~ 0
 GND
 Text Notes 4700 4550 0    60   Italic 0
 Ground-lead\nattachment point
@@ -3007,9 +3008,9 @@ F 3 "" H 5050 4950 60  0000 C CNN
 	1    5050 4950
 	1    0    0    -1  
 $EndComp
-Text GLabel 4750 4950 0    60   Input ~ 0
+Text GLabel 4750 4950 0    50   Input ~ 0
 VCC
-Text GLabel 5350 4950 2    60   Input ~ 0
+Text GLabel 5350 4950 2    50   Input ~ 0
 VCC
 Text Notes 4700 5250 0    60   Italic 0
 Power-lead\nattachment point
