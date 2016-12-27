@@ -1,0 +1,86 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  folders:
+
+  - title: Preliminaries
+    output: web
+    folderitems:
+
+    - title: Preliminaries
+      url: preliminaries.html
+      output: web
+
+    - title: Getting Help!
+      url: preliminaries.html#getting-help
+      output: web
+
+    - title: Take Notice!
+      url: preliminaries.html#take-notice
+      output: web
+
+    - title: Packing List
+      url: preliminaries.html#packing-list
+      output: web
+
+  - title: Setup
+    output: web
+    folderitems:
+
+    - title: Setup
+      url: setup.html
+      output: web
+
+    - title: Inserting Your Module Into a PMOD Socket
+      url: setup.html#inserting-your-module-into-a-pmod-socket
+      output: web
+
+    - title: Inserting Your Module Into a Solderless Breadboard
+      url: setup.html#inserting-your-module-into-a-solderless-breadboard
+      output: web
+
+  - title: Operation
+    output: web
+    folderitems:
+
+    - title: Operation
+      url: operation.html
+      output: web
+
+  - title: Using the Module
+    output: web
+    folderitems:
+
+    - title: Using the Module
+      url: using.html
+      output: web
+
+  - title: I/O Pin Assignments
+    output: web
+    folderitems:
+
+    - title: I/O Pin Assignments
+      url: io.html
+      output: web
+
+  - title: Schematic
+    output: web
+    folderitems:
+
+    - title: Schematic
+      url: misc/schematic.pdf
+      output: web
+
+  - title: Stuff Nobody Reads
+    output: web
+    folderitems:
+
+    - title: Revision History Stuff
+      url: revision_history.html
+      output: web
+
+    - title: Legal Stuff
+      url: legal_stuff.html
+      output: web

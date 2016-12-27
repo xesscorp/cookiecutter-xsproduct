@@ -7,12 +7,13 @@
 \manualversion{ {{cookiecutter.version}} }
 \newcommand{\copyrightyear}{ {{cookiecutter.year}} }
 \newcommand{\xula}{XuLA Board}
+\newcommand{\productrepo}{ \github /{{cookiecutter.repo_name}} }
 
 \begin{document}
 
 \frontmatter
 
-\makexessmanualtitlepage{ {{cookiecutter.product_name}}_cover.jpg}{0.7}
+\makexessmanualtitlepage{cover.jpg}{0.7}
 
 \makexesslegal{\copyrightyear}
 
@@ -35,129 +36,128 @@ Here's some helpful information before getting started.
 Here are some places to get help if you encounter problems:
 
 \begin{itemize}
-\item If you can't get the \product\ to work, send an e-mail message
+\item If you can't get the \product\ module to work, send an e-mail message
 	describing your problem to \href{mailto:\helpemail}{\helpemail}. 
 \item Or submit a problem report at	\url{\helppage}.
-\item \href{http://www.xess.com}{Our web site} also has
+\item \href{\website}{Our web site} (\website) also has
 	\begin{itemize}
-	\item \href{http://www.xess.com/projects/}{example designs}, 
-	\item \href{http://www.xess.com/appnotes/}{application notes}, and
-	\item \href{http://www.xess.com/tutorials/}{tutorials}.
+	\item \href{\website /projects/}{example designs}, 
+	\item \href{\website /appnotes/}{application notes}, and
+	\item \href{\website /tutorials/}{tutorials}.
 %	\item answers to frequently-asked-questions,
 %	\item \href{}{a forum where you can post questions}.
 	\end{itemize}
+\item \href{\productrepo}{Our Github site} (\productrepo) contains the source
+    for the \product\ software and hardware if you really want to get into the
+    nitty-gritty details.
 \end{itemize}
 
 
 \section{Take Notice!}
 
-\begin{itemize}
-\item The \xula\ is not 5V-tolerant. \warning{Do not connect 5V logic signals
-	to the \digpmod\ sockets of the \product.}
-\item \warning{Only power the \product\ with a regulated 5 VDC,
-	center-positive power supply.}
-\end{itemize}
-
-
-\pagebreak %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+It's pretty hard to get in trouble with this module.
 
 \section{Packing List}
 
 Here is what you should have received in your package:
 
 \begin{itemize}
-	\item a \product.
-	\item a 20\by 2 socket.
-	\item a 20\by 2 header.
+	\item a \product\ module.
+	\item a \digpmodtm\ male header.
+	\item two 5\by 1 headers.
 \end{itemize}
 
 
 \chapter{Setup}
 
-The \product\ accepts a \xula\ and provides it with connections to
-separate StickIt! modules such as LED displays, buttons, audio I/O, etc.
+The \product\ module provides an array of eight pushbuttons that you can insert
+into an eight-bit PMOD socket such as the ones on a \stickit. 
 
-\section{Inserting a XuLA Board into Your \texorpdfstring{\product}{StickIt! Board}}
+\section{Inserting Your Module Into a PMOD Socket}
 
-You insert a \xula\ into the central row of sockets on the \product\ as
-shown below. Make sure the \xula\ prototyping header pins line-up with the sockets
-and that the USB connector is oriented towards the \product\ RESET button.
+To use the \product\ module with a \digpmod\ socket, first solder the included
+male \digpmod\ header to the module as shown.
 
-\fixedpic{\includegraphics[width=0.7\textwidth]{stickit_with_xula.jpg}}
+\fixedpic{\includegraphics[width=0.4\textwidth]{cover.jpg}}
 
-To insure a stable connection with the \product, the \xula\ should
-have 0.025'' square posts soldered into its prototyping header. 
-\warning{The 0.019'' round posts used for mounting a \xula\ into a solderless 
-breadboard should not be used or else intermittent connections will occur!}
+Then insert the module into one of the \digpmod\ sockets on the \stickit.
 
-\section{Applying Power to Your \texorpdfstring{\product}{StickIt! Board}}
+\fixedpic{\includegraphics[width=0.7\textwidth]{StickIt-mating.jpg}}
 
-There are several ways to power the combination of your \xula\ and \product.
-Each of these will be discussed below.
+\section{Inserting Your Module Into a Solderless Breadboard}
 
-\subsection{Applying Power Through the USB Port}
+To use the \product\ module with a solderless breadboard, first solder the two included
+5\by 1 headers to the module as shown.
 
-Connecting the \xula\ to a USB port provides it with a 5V supply capable of
-delivering up to 500 mA of current.
-The 5V supply can also power the \product\ and any attached StickIt! modules by 
-placing a shunt on the XULA-PWR jumper as shown below.
+\fixedpic{\includegraphics[width=0.4\textwidth]{breadboard-pins.jpg}}
 
-\fixedpic{\includegraphics[width=0.7\textwidth]{XULA_PWR.jpg}}
+Then insert the module into the breadboard and make connections to it.
 
-\pagebreak %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fixedpic{\includegraphics[width=0.7\textwidth]{breadboard-mating.jpg}}
 
-\subsection{Applying Power Though the Power Jack}
 
-For applications that require more power than the USB port can provide, you can
-attach a regulated, 5 VDC center-positive power adapter to the 5VDC jack on the
-\product. 
-In this case, the shunt should be removed from the XULA-PWR
-jumper and placed on the 5V-PWR jumper as shown below. 
-In this configuration, the USB port powers the \xula\ while the adapter powers
-the \product\ and any attached StickIt! modules.
+\chapter{Operation}
 
-\fixedpic{\includegraphics[width=0.7\textwidth]{5V_PWR.jpg}}
+All eight buttons of the \product\ module are built from the following circuit:
 
-\pagebreak %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\fixedpic{\includegraphics[width=0.6\textwidth]{circuit.png}}
 
-\subsection{Applying Power to Stand-Alone Applications}
+When a pushbutton is pressed, the corresponding pin on the \digpmod\ and breadboard
+headers is pulled to ground through the 4.7 K$\Omega$ resistor.
+When the pushbutton is released, the pin is pulled to the voltage applied to the
+VCC pin of the module through a combined resistance of 5 K$\Omega$.
 
-For applications that operate stand-alone with no connection to a USB port, you
-can attach a regulated, 5 VDC center-positive power adapter to the 5VDC jack on
-the \product. 
-In addition, shunts should be placed on both the XULA-PWR
-and 5V-PWR jumpers as shown below. 
-This will transfer power from the adapter through the \product\ to the \xula.
+There is no hardware debouncing of the switches on the module.
 
-\fixedpic{\includegraphics[width=0.7\textwidth]{Standalone_PWR.jpg}}
 
-\warning{A USB cable should not be attached to the \xula\ in this
-configuration or damage may result from the direct connection of the power
-adapter to the 5V supply pin of the USB port!}
+\chapter{Using the Module}
 
-In order to prevent inadvertent damage, you can remove the shunt on 5V jumper of the
-\xula\ to disconnect the USB 5V supply as shown below. Note that doing this will
-prevent you from powering the \xula\ through the USB port until the 5V shunt is
-restored.
-\warning{By default, the 5V jumper is closed by a wire trace on the underside
-of the \xula! You will need to cut this trace to open the jumper.} 
+Using the \product\ module on a breadboard is easy: just connect the pins of the
+module to the inputs of your circuitry wherever you need a pushbutton input.
 
-\pagebreak %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If you're using the \product\ module to connect with one of the \xess\ FPGA boards
+through a \digpmod\ port, then the process is a bit more complicated:
 
-\subsection{Applying Power from a \rpi}
+\begin{enumerate}
+\item Create a Xilinx ISE/Vivado FPGA project and write some VHDL code for scanning the buttons.
+\item Attach the module to a \digpmod\ socket on an \xess\ board.
+\item Determine the pins of the FPGA that connect to each I/O pin of the module.
+\item Make a UCF file associating each FPGA pin with an I/O pin of the module.
+\item Include the UCF file in your ISE/Vivado project and compile it into a bitstream.
+\end{enumerate}
 
-The \product\ can get power through the GPIO connector of a \rpi\
-by placing a shunt on the GPIO-5V jumper.
-This connects the 5V supply from the \rpi\ to the same power rail as the 5V power jack.
-Because of this, \warning{a power adapter should not be connected to the 5V jack in this
-configuration or damage may result from the direct connection of the power
-adapter to the 5V supply of the \rpi!}
-A power adapter \emphasis{can} be used to power the \product\ when it is attached
-to a \rpi\ only if the shunt is removed from the GPIO-5V jumper.
-In addition, \warning{a shunt should \emphasis{never} be placed on the GPIO-3.3V jumper 
-when the \product\ is attached to the \rpi.}
+That's a pretty big effort, so to get you started we've provided a 
+\href{\productrepo /FPGA/ButtonTest}{pre-built project} (\productrepo /FPGA/ButtonTest) 
+that does all that.
+You can take that and modify it for your own applications.
 
-\fixedpic{\includegraphics[width=0.7\textwidth]{RPI_PWR.jpg}}
+The pre-built project uses a specific \digpmod\ port and \xess\ FPGA board.
+To make it easier to move the module to another port or use a different board, 
+we've built the \pgm{xsconnect}\ program that determines all the FPGA pin
+assignments for you.
+For example, the FPGA pin assignments to use when connecting the \product\
+module to the PM2 port of the \stickit\ with a \xulatwo\ FPGA board are shown below.
+Just cut-and-paste the pin assignment constraints into the UCF file for your
+project and you're good to go.
+
+\fixedpic{\includegraphics[width=0.6\textwidth]{xsconnect.png}}
+
+
+\appendix
+
+\chapter{I/O Locations}
+
+The connections of the I/O signals to the \digpmod\ and breadboard headers of 
+the \product\ module are shown below:
+
+\fixedpic{\includegraphics[width=0.7\textwidth]{pinout.png}}
+
+
+
+\end{document}
+
+
+
 
 
 \chapter{Connections}

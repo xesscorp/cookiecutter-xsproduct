@@ -8,11 +8,11 @@
     "lead_dev_email": "",
     "lead_dev_twitter": "",
 
-    "product_name": "my_product",
-    "repo_name": "{{cookiecutter.product_name}}",
+    "product_name": "My Product",
+    "repo_name": "{{ cookiecutter.product_name|lower|replace(' ','_') }}",
     "product_short_description": "The {{cookiecutter.product_name}} is truly awesome!",
-    "release_date": "yyyy-mm-dd",
-    "year": "yyyy",
+    "release_date": "{% now 'utc', '%Y-%m-%d' %}",
+    "year": "{% now 'utc', '%Y' %}",
     "version": "0.1",
     "product_type": "OSHW",
     "license": "CC BY 4.0",
@@ -20,6 +20,23 @@
     "license_icon": "https://i.creativecommons.org/l/by/4.0/88x31.png",
     "_copy_without_render": [
         "*.sty",
-        "docs/site/*"
+        "docs/_data",
+        "docs/_includes",
+        "docs/_layouts",
+        "docs/_posts",
+        "docs/_site",
+        "docs/_tooltips",
+        "docs/css",
+        "docs/fonts",
+        "docs/images",
+        "docs/js",
+        "docs/licenses",
+        "docs/misc",
+        "docs/pages",
+        "docs/*.md",
+        "docs/*.xml",
+        "docs/*.json",
+        "docs/*.html",
+        "docs/*.sh"
     ]
 }

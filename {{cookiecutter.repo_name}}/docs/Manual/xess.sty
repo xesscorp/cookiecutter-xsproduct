@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YOU MUST RUN texhash TO ENABLE ANY CHANGES IN THIS FILE!!!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Required packages.
 \usepackage[ascii]{inputenc}
 \usepackage[T1]{fontenc}
@@ -32,6 +36,8 @@
 \newcommand{\xesscorplogo}{xesscorp-logo.png}  % "XESS Corporation".
 \newcommand{\helpemail}{help@xess.com}
 \newcommand{\helppage}{www.xess.com/interact/contact/}
+\newcommand{\website}{http://www.xess.com}
+\newcommand{\github}{https://github.com/xesscorp}
 \newcommand{\by}{$\times$}
 % Place text between || to make inline listing.
 \lstMakeShortInline[columns=fixed]|
@@ -41,6 +47,9 @@
 \newcommand{\digpmod}{PMOD}
 \newcommand{\digpmodtm}{\regtmark{\digpmod}}
 \newcommand{\rpi}{Raspberry Pi}
+\newcommand{\xula}{XuLA Board}
+\newcommand{\stickit}{StickIt! Board}
+\newcommand{\xulatwo}{\xula 2}
 
 \defaultfontfeatures{Ligatures=TeX} % Enable dash conversions: -- is \textendash
 
@@ -322,6 +331,15 @@
 \def\subsubsecfntsz{12pt}
 \def\subsubseclinespc{1.2\subsubsecfntsz} % Section title line spacing.
 \setsubsubsecheadstyle{\fontsize{\subsubsecfntsz}{\subsubseclinespc}\subsubsecfont\bfseries\itshape\raggedright}
+
+% Paragraph formating.
+\setparaindent{0.0in}
+\setbeforeparaskip{\baselineskip}
+\setafterparaskip{1pt}
+\newfontfamily{\parafont}{Arial Narrow}
+\def\parafntsz{11pt}
+\def\paralinespc{1.2\parafntsz} % Section title line spacing.
+\setparaheadstyle{\fontsize{\parafntsz}{\paralinespc}\parafont\bfseries\itshape\raggedright}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -489,12 +507,12 @@ All other trademarks are the property of their respective owners.
 
 \parbox[t]{1.3in}{
 	\hrule height 0pt width 0pt
-	\includegraphics[width=1.3in]{CC-BY-SA_icon.png}}
+	\includegraphics[width=1.3in]{CC-BY-4_icon.png}}
 \hfill
 \parbox[t]{1.0\textwidth - 1.5in}{
 	\hrule height 0pt width 0pt
-	This document is licensed under the Attribution-ShareAlike 3.0 
-	Unported license, available at http://creativecommons.org/licenses/by-sa/3.0/.}
+	This document is licensed under the Creative Commons Attribution 4.0 
+	license (CC BY 4.0), available at http://creativecommons.org/licenses/by/4.0/legalcode.}
 }
 
 \newenvironment{xesslegal}

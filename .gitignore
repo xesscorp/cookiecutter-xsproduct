@@ -15,3 +15,21 @@ pcb/_autosave*
 # Cookiecutter
 output/
 boilerplate/
+
+# Stuff we want to keep
+!*.vhd
+!*.vhdl
+!*.v
+!*.xise
+!*.ucf
+!*.pro
+!*.sch
+!*.kicad_pcb
+!*.lib
+!*.jpg
+!*.png
+!*.sty
+!*.tex
+!*.md
+!*.yml
+!*.ico

@@ -1,0 +1,114 @@
+output: web
+# this property is useful for conditional filtering of content that is separate from the PDF.
+
+product_name: {{cookiecutter.product_name}} Module
+
+product_version: V{{cookiecutter.version}}
+
+product_repo: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.repo_name}}
+
+topnav_title: {{cookiecutter.product_name}} Module Manual
+# this appears on the top navigation bar next to the home button
+
+site_title: {{cookiecutter.product_name}} Module Manual
+# this appears in the html browser tab for the site title (seen mostly by search engines, not users)
+
+stickit_mb: StickIt! Motherboard
+xula2: XuLA2
+
+company_shortname: XESS
+
+company_name: XESS Corporation
+# this appears in the footer
+
+company_website: http://{{cookiecutter.website}}
+
+company_help_page: http://{{cookiecutter.website}}/interact/contact
+
+company_help_email: help@xess.com 
+
+manual_license: 'License: <a href="{{cookiecutter.license_link}}">{{cookiecutter.license}}</a>'
+
+github_editme_path:
+# if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
+
+disqus_shortname:
+# if you're using disqus for comments, add the shortname here. if not, leave this value blank.
+
+host: 127.0.0.1
+# the preview server used. Leave as is.
+
+port: 4005
+# the port where the preview is rendered. You can leave this as is unless you have other Jekyll builds using this same port that might cause conflicts. in that case, use another port such as 4006.
+
+exclude:
+  - .idea/
+  - .gitignore
+  - Manual
+# these are the files and directories that jekyll will exclude from the build
+
+feedback_email: help@xess.com
+# used as a contact email for the Feedback link in the top navigation bar
+
+# feedback_disable: true
+# if you uncomment the previous line, the Feedback link gets removed
+
+# feedback_link: "http://helpy.io/"
+# if you uncomment the previous line, it changes where the feedback link points to
+
+highlighter: rouge
+# library used for syntax highlighting
+
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
+# filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
+
+collections:
+  tooltips:
+    output: true
+# collections are declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output unless you change output to true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      sidebar: manual_sidebar
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+      tooltip: true
+
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: true
+      sidebar: manual_sidebar
+
+# these are defaults used for the frontmatter for these file types
+
+sidebars:
+- manual_sidebar
+
+description: "Product manual for the {{cookiecutter.product_name}} module from XESS Corp."
+# the description is used in the feed.xml file
+
+# needed for sitemap.xml file only
+url: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.product_name}}

@@ -1,0 +1,22 @@
+.center-it {
+  display: block;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.float-it-left {
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.float-it-right {
+  display: block;
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+img.thumbnail-it {
+  width: 150px;
+  box-shadow: none;
+}
